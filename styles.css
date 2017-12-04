@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, 
+body {
+	height: 100%;
+}
+
+
+/* Header */
+header {
+	min-height: 10%;
+	background: #dd1100;
+	font-size: 1em;
+	font-family: "Press Start 2P", cursive;
+	text-align: center;
+}
+
+h1 {
+	padding: 0.5em 0.5em 0;
+	font-size: 3em;
+	line-height: 1.1em;
+}
+
+h2 {
+	padding: 1.5em 0.5em;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+/* Tools */
+.tools {
+	display: flex;
+	justify-content: space-evenly;
+}
+form {
+	
+}
+span {
+	border: 1px solid black;
+	border-right: none;
+	border-radius: 8px 0 0 8px;
+	background-color: red;
+	padding: 4px ;
+}
+
+input[type=number] {
+/*	display: block;*/
+	padding: 4px;
+	border: 1px solid black;
+	border-left: none;
+	border-radius: 0 8px 8px 0;
+	background-color: bisque;
+	font-size: 16px;
+	margin:
+}
