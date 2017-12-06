@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Pixel Art Maker</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" >
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -12,21 +13,27 @@
 		<h2>Google Developer Scholarship Project</h2>
 	</header>
 	<section class="tools">
-		<div>
-			<h3>grid size</h3>
+		<div class="grid-size">
 			<form id="size-picker">
-				<div>
-        <span>Grid Height:</span><input type="number" id="input-height" name="height" min="1" max="100" value="1">
+				<div class="gridsize">
+        			<i class="fa fa-arrows-v size-icon" aria-hidden="true"></i><input   type="number" id="input-height" name="height" min="1" max="100"  placeholder="1-100">
 				</div>
-        Grid Width:
-        <input type="number" id="input-width" name="width" min="1" max="100"  placeholder="width">
-        <input type="submit">
-    </form>	
+       			<div class="gridsize">
+        			<i class="fa fa-arrows-h size-icon" aria-hidden="true"></i><input type="number" id="input-width" name="width" min="1" max="100" placeholder="1-100">
+				</div>
+				<div>
+        			<input type="submit">
+				</div>
+    		</form>	
 		</div>
 		<div>
 			<h3>pick a color</h3>
 			<input type="color" id="color-picker">
 		</div>
+<!-- TODO: eraser -->
+<!-- TODO: grid on/of-->
+<!-- TODO: grid color-->
+<!-- TODO: grid cleaner-->
 	</section>
 	<section>
 		<h3>canvas</h3>
