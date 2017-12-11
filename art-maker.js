@@ -1,3 +1,4 @@
+// function to create pixel navas
 function makeGrid() {
 	let gridWidth = $("#input-width").val();
 	let gridHeight = $('#input-height').val();
@@ -17,3 +18,15 @@ $('#size-picker').submit(function(event) {
 							makeGrid();
 						});
 						
+// function to paint the grid cells with selected color
+$('table').on('click', 'td', function() {
+  	let paintColor = $('#color-picker').val();
+  	let cellColor = $(this).css('background-color');
+  	if (cellColor === 'rgb(255, 255, 255)') {
+	  $(this).css({'background-color': paintColor});
+	} else if (cellColor !== paintColor) {
+	  $(this).css({'background-color': '#fff'});
+	} else {
+	  $(this).css({'background-color': paintColor});
+	}
+});
