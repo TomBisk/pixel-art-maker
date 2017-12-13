@@ -32,27 +32,91 @@ h2 {
 
 /* Tools */
 .tools {
-	display: flex;
-	justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 10%;
 }
+
 form {
-	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 130px;
+	height: 46px;
+	background: #eee;
+	/*	padding: 2px*/
 }
-span {
+.gridsize {
+/*	height: 26px;*/
+	margin: 0px;
+  flex-grow: 1;
+}
+
+.size-icon {
+	box-sizing: border-box;
+	height: 20px;
+	width: 20px;
 	border: 1px solid black;
 	border-right: none;
-	border-radius: 8px 0 0 8px;
-	background-color: red;
-	padding: 4px ;
+	background-color: #ede;
+	padding: 3px 0;
+	text-align: center;
+	font-size: 12px;
+	margin: 0;
 }
 
 input[type=number] {
-/*	display: block;*/
-	padding: 4px;
+	padding: 2px 0;
 	border: 1px solid black;
 	border-left: none;
-	border-radius: 0 8px 8px 0;
-	background-color: bisque;
-	font-size: 16px;
-	margin:
+	font-size: 12px;
+	text-align: center;
+	margin: 0;
+}
+
+input[type=submit] {
+  width: 40px;
+  height: 40px;
+}
+.gridsize2 {
+/*  flex-grow: 1;*/
+  background: #ddd;
+  border: 1px solid #000;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Canvas */
+.canvas {
+  height: auto;
+}
+.canvas h3 {
+	visibility: hidden;
+}
+
+table,
+tr,
+td {
+	border: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 1em auto;
+}
+
+tr {
+	height: 20px;
+}
+
+td {
+	width: 20px;
+}
+
+/* Footer */
+footer {
+  height: 10%;
+  
 }
