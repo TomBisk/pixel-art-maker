@@ -92,6 +92,9 @@ input[type=submit] {
 .canvas {
   height: auto;
 }
+.canvas h3 {
+	visibility: hidden;
+}
 
 table,
 tr,
@@ -101,6 +104,7 @@ td {
 
 table {
 	border-collapse: collapse;
+	margin: 1em auto;
 }
 
 tr {
