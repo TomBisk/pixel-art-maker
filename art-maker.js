@@ -18,26 +18,21 @@ $('#size-picker').submit(function(event) {
 	makeGrid();
 });
 						
-// function to paint the grid cells with selected color
-
-
+// function to fill the grid-cells by picked color
 function paintGrid() {
-  	const painColor = $('#color-picker').val();
-	
-  	let cellColor = $(this).css('background-color');
-	
-	function colTransform() {
-		$('.canvas h3').css({'background-color': painColor});
-		let paintColor = $('.canvas h3').css('background-color');
-		$('.canvas h3').text(paintColor);
-		return paintColor;
+  	const pickedColor = $('#color-picker').val();
+  	const cellColor = $(this).css('background-color');
+	// function to change the hex color value from picker to rgb() value
+	function hexToRgb() {
+		$('.canvas h3').css({'background-color': pickedColor});
+		const rgbValue = $('.canvas h3').css('background-color');
+		return rgbValue;
 	}
-  	if (cellColor === 'rgb(255, 255, 255)') {
-	  $(this).css({'background-color': painColor});
-	} else if (cellColor === colTransform()) {
-	  $(this).css({'background-color': '#fff'});
-	} else {
-	  $(this).css({'background-color': painColor});
+  	if (cellColor === hexToRgb()) {
+		$(this).css({'background-color': '#fff'});
+	} 	else {
+	  	$(this).css({'background-color': pickedColor});
 	}
 }
 $('table').on('click', 'td', paintGrid);
+//$('table').on('mousedown', 'td', paintGrid);
