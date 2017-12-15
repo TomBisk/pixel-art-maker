@@ -3,19 +3,40 @@
 	padding: 0;
 }
 
-html, 
+html {
+/*	height: 100%;*/
+/*	width: 100%;*/
+} 
+
 body {
-	height: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	background-color: #b5bdc9;
+	min-height: 100vh;
+	padding: 0.5em;
+	color: #b5bdc9; 
 }
 
 
+header,
+sidebar,
+.canvas,
+footer {
+	border: 1px solid #fcfcfc;
+	border-radius: 15px;
+}
+
 /* Header */
 header {
-	min-height: 10%;
-	background: #dd1100;
+	
+	background: #134390;
 	font-size: 1em;
 	font-family: "Press Start 2P", cursive;
 	text-align: center;
+/*	margin: 1em;*/
+	
+/*	order: -1;*/
 }
 
 h1 {
@@ -30,11 +51,17 @@ h2 {
 	line-height: 1.5em;
 }
 
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+}
+
 /* Tools */
-.tools {
-  display: flex;
-  justify-content: space-evenly;
-  min-height: 10%;
+sidebar {
+	padding: 0.5em;
+	background: #134390;
+	margin: 0.5em 0.5em 0.5em 0;
 }
 
 form {
@@ -47,6 +74,7 @@ form {
 	background: #eee;
 	/*	padding: 2px*/
 }
+
 .gridsize {
 /*	height: 26px;*/
 	margin: 0px;
@@ -79,6 +107,7 @@ input[type=submit] {
   width: 40px;
   height: 40px;
 }
+
 .gridsize2 {
 /*  flex-grow: 1;*/
   background: #ddd;
@@ -90,7 +119,8 @@ input[type=submit] {
 
 /* Canvas */
 .canvas {
-  height: auto;
+	margin: 0.5em 0;
+	background: #134390;
 }
 .canvas h3 {
 	visibility: hidden;
@@ -108,15 +138,37 @@ table {
 }
 
 tr {
-	height: 20px;
+	height: 2.5vh;
 }
 
 td {
-	width: 20px;
+	width: 2.5vh;
 }
 
 /* Footer */
 footer {
-  height: 10%;
+/*	margin: 1em;*/
+	background: #134390;
   
+}
+
+
+@media (max-width: 30em) {
+  .canvas {
+    flex: 1 0 auto;
+  }
+}
+@media (min-width: 30em) {
+  .header {
+    display: block;
+  }
+  .wrapper {
+    flex-direction: row;
+  }
+  .canvas {
+    flex: 1 1 auto;
+  }
+  .aside {
+    width: 20%;
+  }
 }

@@ -8,7 +8,7 @@ function makeGrid() {
 		for ( let j = 0; j < gridWidth; j++) {
 		  $('tr:last').append('<td></td>');
 		}
-  	//$('td').css({"background-color": "#fff"});
+  	$('td').css({"background-color": "#fff"});
 	}
   	event.preventDefault();
   	return;

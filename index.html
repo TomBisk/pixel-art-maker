@@ -12,33 +12,36 @@
 		<h1>Pixel Art Maker</h1>
 		<h2>Google Developer Scholarship Project</h2>
 	</header>
-	<section class="tools">
-		<div class="grid-size">
-			<form id="size-picker">
-				<div class="gridsize">
-        			<i class="fa fa-arrows-v size-icon" aria-hidden="true"></i><input   type="number" id="input-height" name="height" min="1" max="100"  placeholder="1-100">
-				</div>
-       			<div class="gridsize">
-        			<i class="fa fa-arrows-h size-icon" aria-hidden="true"></i><input type="number" id="input-width" name="width" min="1" max="100" placeholder="1-100">
-				</div>
-				<div class="gridsize2">
-        			<input type="submit">
-				</div>
-    		</form>	
-		</div>
-		<div>
-			<h3>pick a color</h3>
-			<input type="color" id="color-picker">
-		</div>
-<!-- TODO: eraser -->
-<!-- TODO: grid on/of-->
-<!-- TODO: grid color-->
-<!-- TODO: grid cleaner-->
-	</section>
-	<section class="canvas">
-		<h3>canvas</h3>
-		<table id="pixel-canvas"></table>
-	</section>
+	<div class="wrapper">
+		<sidebar>
+			<div class="grid-size">
+				<form id="size-picker">
+					<div class="gridsize">
+						<i class="fa fa-arrows-v size-icon" aria-hidden="true"></i><input   type="number" id="input-height" name="height" min="1" max="25"  placeholder="1-100">
+					</div>
+					<div class="gridsize">
+						<i class="fa fa-arrows-h size-icon" aria-hidden="true"></i><input type="number" id="input-width" name="width" min="1" max="25" placeholder="1-100">
+					</div>
+					<div class="gridsize2">
+						<input type="submit">
+					</div>
+				</form>	
+			</div>
+			<div>
+				<h3>pick a color</h3>
+				<input type="color" id="color-picker">
+			</div>
+	<!-- TODO: eraser -->
+	<!-- TODO: grid on/of-->
+	<!-- TODO: grid color-->
+	<!-- TODO: grid cleaner-->
+		</sidebar>
+		<section class="canvas">
+			<h3>canvas</h3>
+			<table id="pixel-canvas"></table>
+		</section>
+	</div>
+	
 	<footer>
 		<h4>2017 by TomBisk</h4>
 	</footer>
