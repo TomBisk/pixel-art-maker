@@ -3,50 +3,49 @@
 	padding: 0;
 }
 
+/*
 html {
-/*	height: 100%;*/
-/*	width: 100%;*/
+	height: 100%;
+	width: 100%;
 } 
+*/
 
 body {
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
-	background-color: #b5bdc9;
 	min-height: 100vh;
 	padding: 0.5em;
+	
+	background-color: #b5bdc9;
+	font-family: "Press Start 2P", cursive;
 	color: #b5bdc9; 
 }
 
-
 header,
 sidebar,
-.canvas,
+main,
 footer {
-	border: 1px solid #fcfcfc;
-	border-radius: 15px;
+	border: 2px solid #ffffff;
+/*	border-radius: 16px;*/
+	background: #134390;
 }
 
 /* Header */
 header {
-	
-	background: #134390;
+	padding: 1em;
 	font-size: 1em;
-	font-family: "Press Start 2P", cursive;
 	text-align: center;
-/*	margin: 1em;*/
-	
-/*	order: -1;*/
 }
 
 h1 {
-	padding: 0.5em 0.5em 0;
-	font-size: 3em;
+	margin-bottom: 0.3em;
+	font-size: 2.5em;
 	line-height: 1.1em;
 }
 
 h2 {
-	padding: 1.5em 0.5em;
+/*	padding: 1.5em 0.5em;*/
 	font-size: 1em;
 	line-height: 1.5em;
 }
@@ -60,7 +59,6 @@ h2 {
 /* Tools */
 sidebar {
 	padding: 0.5em;
-	background: #134390;
 	margin: 0.5em 0.5em 0.5em 0;
 }
 
@@ -116,15 +114,20 @@ input[type=submit] {
   padding: 0;
 }
 
-
-/* Canvas */
-.canvas {
-	margin: 0.5em 0;
-	background: #134390;
-}
-.canvas h3 {
+sidebar h3:last-child {
 	visibility: hidden;
 }
+
+/* Canvas */
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0.5em 0;
+	padding: 1em;
+}
+
+
 
 table,
 tr,
@@ -134,7 +137,7 @@ td {
 
 table {
 	border-collapse: collapse;
-	margin: 1em auto;
+	z-index: 1;
 }
 
 tr {
@@ -147,9 +150,9 @@ td {
 
 /* Footer */
 footer {
-/*	margin: 1em;*/
-	background: #134390;
-  
+	padding: 1em;
+  	font-size: 1em;
+	text-align: center;
 }
 
 
