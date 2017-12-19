@@ -15,27 +15,31 @@
 	<div class="wrapper">
 		<sidebar>
 			<div class="grid-size">
+				<h1>.tools</h1>
+				<h3> canvas size</h3>
 				<form id="size-picker">
 					<div class="gridsize">
-						<i class="fa fa-arrows-v size-icon" aria-hidden="true"></i><input   type="number" id="input-height" name="height" min="1" max="25"  placeholder="1-100">
+						<i class="fa fa-arrows-v size-icon" aria-hidden="true"></i>
+						<input   type="number" id="input-height" name="height" min="1" max="25"  placeholder="1-25">
 					</div>
 					<div class="gridsize">
-						<i class="fa fa-arrows-h size-icon" aria-hidden="true"></i><input type="number" id="input-width" name="width" min="1" max="25" placeholder="1-100">
+						<i class="fa fa-arrows-h size-icon" aria-hidden="true"></i><input type="number" id="input-width" name="width" min="1" max="25" placeholder="1-25">
 					</div>
-					<div class="gridsize2">
-						<input type="submit">
-					</div>
+						<input type="submit" value="create / clear">
 				</form>	
 			</div>
 			<div>
 				<h3>pick a color</h3>
 				<input type="color" id="color-picker">
 			</div>
-			<h3>canvas</h3>
-	<!-- TODO: eraser -->
+			<div>
+				<h3>grid options</h3>
+				<input type="button">
 	<!-- TODO: grid on/of-->
 	<!-- TODO: grid color-->
-	<!-- TODO: grid cleaner-->
+	<!-- TODO: grid style-->
+			</div>
+			<h3>canvas</h3>
 		</sidebar>
 		<main class="canvas">
 			

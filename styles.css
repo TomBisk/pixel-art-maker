@@ -45,7 +45,6 @@ h1 {
 }
 
 h2 {
-/*	padding: 1.5em 0.5em;*/
 	font-size: 1em;
 	line-height: 1.5em;
 }
@@ -58,63 +57,78 @@ h2 {
 
 /* Tools */
 sidebar {
+	width: 150px;
 	padding: 0.5em;
 	margin: 0.5em 0.5em 0.5em 0;
+}
+sidebar h1 {
+	font-size: 1.2em;
+	text-align: right;
+}
+sidebar h3 {
+	font-size: 0.6em;
+	text-transform: uppercase;
+	border-top: 4px double #fff;
+	line-height: 2.5em;
+	text-align: center;
 }
 
 form {
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	width: 130px;
-	height: 46px;
-	background: #eee;
-	/*	padding: 2px*/
+	align-items: center;
 }
 
 .gridsize {
-/*	height: 26px;*/
-	margin: 0px;
-  flex-grow: 1;
+	position: relative;
+	color: #134390;
 }
 
 .size-icon {
-	box-sizing: border-box;
-	height: 20px;
-	width: 20px;
-	border: 1px solid black;
-	border-right: none;
-	background-color: #ede;
-	padding: 3px 0;
+	position: absolute;
+	left: 0;
+	padding: 7px 10px;
+	background: #f2f2f2;
+	width: 15px;
+	margin: 0.4em;
 	text-align: center;
-	font-size: 12px;
-	margin: 0;
+/*	font-size: 12px;*/
+}
+input {
+	margin: 0.5em;	
 }
 
 input[type=number] {
-	padding: 2px 0;
-	border: 1px solid black;
-	border-left: none;
-	font-size: 12px;
+	padding-left: 40px;
+	border: 1px solid #f2f2f2;
+	font-size: 0.8em;
+	line-height: 2.3em;
 	text-align: center;
-	margin: 0;
+	background: transparent;
+	color: #fff;
 }
 
 input[type=submit] {
-  width: 40px;
-  height: 40px;
+  width: 97px;
+  height: 30px;
+	margin: 0.5em;
+}
+
+input[type=color] {
+	display: block;
+	margin: 0.5em auto;
 }
 
 .gridsize2 {
-/*  flex-grow: 1;*/
+	width: 80px;
+	height: 25px;
   background: #ddd;
   border: 1px solid #000;
-  margin: 0;
+  margin: 0.5em;
   padding: 0;
 }
 
-sidebar h3:last-child {
+sidebar > h3:last-child {
 	visibility: hidden;
 }
 
