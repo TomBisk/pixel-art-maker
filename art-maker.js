@@ -24,8 +24,8 @@ function paintGrid() {
   	const cellColor = $(this).css('background-color');
 	// function to change the hex color value from picker to rgb() value
 	function hexToRgb() {
-		$('.canvas h3').css({'background-color': pickedColor});
-		const rgbValue = $('.canvas h3').css('background-color');
+		$('.hex-rgb').css({'background-color': pickedColor});
+		const rgbValue = $('.hex-rgb').css('background-color');
 		return rgbValue;
 	}
   	if (cellColor === hexToRgb()) {
