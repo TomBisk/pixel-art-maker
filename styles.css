@@ -119,9 +119,15 @@ input[type=color] {
 	margin: 0.5em auto;
 }
 
-.grid-options {
-	
+
+
+/*
+.grid-style,
+.grid-color {
+	visibility: hidden;
 }
+*/
+
 input.grid-on {
 	display: block;
 	margin: 0 auto;
@@ -150,8 +156,7 @@ main {
 
 
 
-table,
-tr,
+
 td {
 	border: 1px solid black;
 }
