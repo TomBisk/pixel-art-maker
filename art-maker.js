@@ -61,4 +61,19 @@ function gridOf() {
 		gridOfFlag = true;
 	}
 }
+$('input.grid-style').on('click', gridStyle);
 
+// function gridStyle(), to change canvas grid lines style
+function gridStyle() {
+	const style = $('td').css('border-style');
+	switch(style) {
+		case "solid":
+		$('td').css({'border-style': 'dashed'});
+		break;
+		case "dashed":
+		$('td').css({'border-style': 'dotted'});
+		break;
+		case "dotted":
+		$('td').css({'border-style': 'solid'});
+	}
+}
