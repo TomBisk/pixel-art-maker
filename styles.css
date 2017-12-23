@@ -27,7 +27,7 @@ sidebar,
 main,
 footer {
 	border: 2px solid #ffffff;
-/*	border-radius: 16px;*/
+/*	borde r-radius: 16px;*/
 	background: #134390;
 }
 
@@ -139,6 +139,7 @@ input.grid-on {
 .grid-color {
 	width: 45px;
 	height: 30px;
+	float: left;
 }
 
 .hex-rgb {
@@ -159,8 +160,8 @@ main {
 
 td {
 	border-width: 1px;
-	border-style: solid;
-	border-color: #000;
+/*	border-style: solid;*/
+/*	border-color: #000;*/
 }
 
 table {

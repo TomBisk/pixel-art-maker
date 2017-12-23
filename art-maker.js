@@ -13,7 +13,7 @@ function makeGrid() {
 		for ( let j = 0; j < gridWidth; j++) {
 		  $('tr:last').append('<td></td>');
 		}
-  	$('td').css({"background-color": "#fff"});
+  	$('td').css({"background-color": "#fff", "border-style": bdStyle, "border-color": bdColor});
 	}
   	event.preventDefault();
   	return;
@@ -51,29 +51,42 @@ let gridOfFlag = true;
 function gridOf() {
 	if (gridOfFlag === true) {
 		$(this).css({'background-color': '#4a4949'}).val('grid off');
-		$('td').css({'border': 'none'});
+		$('td').css({'border-style': 'none'});
 		$('.grid-style, .grid-color').attr('disabled', 'disabled');
 		gridOfFlag = false;
 	} else {
 		$(this).css({'background-color': '' }).val('grid on');
-		$('td').css({'border': ''});
+		$('td').css({'border-style': bdStyle});
 		$('.grid-style, .grid-color').removeAttr('disabled');
 		gridOfFlag = true;
 	}
 }
 $('input.grid-style').on('click', gridStyle);
-
-// function gridStyle(), to change canvas grid lines style
+// variable to store default or setted gridStyle and to restore it when the grid is off and on again
+let bdStyle = 'solid';
+// function gridStyle(), to change canvas grid-lines style
 function gridStyle() {
 	const style = $('td').css('border-style');
 	switch(style) {
 		case "solid":
 		$('td').css({'border-style': 'dashed'});
+		bdStyle = 'dashed'
 		break;
 		case "dashed":
 		$('td').css({'border-style': 'dotted'});
+		bdStyle = 'dotted'
 		break;
 		case "dotted":
 		$('td').css({'border-style': 'solid'});
+		bdStyle = 'solid'
 	}
+}
+
+$('input.grid-color').on('change', gridColor);
+// variable to set default and store setted color of grid-lines
+let bdColor = '#000';
+// function gridColor to change color of canvas grid-lines
+function gridColor() {
+	bdColor = $('.grid-color').val();
+	$('td').css({'border-color': bdColor});
 }
