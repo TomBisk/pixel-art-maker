@@ -5,6 +5,8 @@ function makeGrid() {
 	$('#pixel-canvas').children().remove();
 	if (gridWidth + gridHeight > 1) {
 		$('.grid-options input').removeAttr('disabled');
+		gridOfFlag = true;
+		$('input.grid-on').css({'font-weight': 'bolder' }).val('grid on');
 	} else {
 		$('.grid-options input').attr('disabled', 'disabled');
 	}
@@ -50,12 +52,12 @@ let gridOfFlag = true;
 //function gridOf, to on/of grid visibility
 function gridOf() {
 	if (gridOfFlag === true) {
-		$(this).css({'background-color': '#4a4949'}).val('grid off');
+		$(this).css({'font-weight': 'normal'}).val('grid off');
 		$('td').css({'border-style': 'none'});
 		$('.grid-style, .grid-color').attr('disabled', 'disabled');
 		gridOfFlag = false;
 	} else {
-		$(this).css({'background-color': '' }).val('grid on');
+		$(this).css({'font-weight': 'bolder' }).val('grid on');
 		$('td').css({'border-style': bdStyle});
 		$('.grid-style, .grid-color').removeAttr('disabled');
 		gridOfFlag = true;
@@ -70,14 +72,17 @@ function gridStyle() {
 	switch(style) {
 		case "solid":
 		$('td').css({'border-style': 'dashed'});
+		$('.grid-style').attr('src', './img/icon-grid-dashed.png')
 		bdStyle = 'dashed'
 		break;
 		case "dashed":
 		$('td').css({'border-style': 'dotted'});
+		$('.grid-style').attr('src', './img/icon-grid-dotted.png')
 		bdStyle = 'dotted'
 		break;
 		case "dotted":
 		$('td').css({'border-style': 'solid'});
+		$('.grid-style').attr('src', './img/icon-grid-solid.png')
 		bdStyle = 'solid'
 	}
 }
