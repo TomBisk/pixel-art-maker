@@ -16,31 +16,30 @@
 		<sidebar>
 			<div class="grid-size">
 				<h1>.tools</h1>
-				<h3> canvas size</h3>
 				<form id="size-picker">
+					<h2> canvas size</h2>
 					<div class="gridsize">
-						<i class="fa fa-arrows-v size-icon" aria-hidden="true"></i>
+						<i class="fa fa-arrows-v icon-size" aria-hidden="true"></i>
 						<input   type="number" id="input-height" name="height" min="1" max="25"  placeholder="1-25">
 					</div>
 					<div class="gridsize">
-						<i class="fa fa-arrows-h size-icon" aria-hidden="true"></i><input type="number" id="input-width" name="width" min="1" max="25" placeholder="1-25">
+						<i class="fa fa-arrows-h icon-size" aria-hidden="true"></i><input type="number" id="input-width" name="width" min="1" max="25" placeholder="1-25">
 					</div>
-						<input type="submit" value="create / clear">
+						<input type="submit" class="hov" value="create / clear">
 				</form>	
 			</div>
 			<div>
-				<h3>pick a color</h3>
-				<input type="color" id="color-picker">
+				<h2>pick a color</h2>
+				<input type="color" id="color-picker" class="hov">
 			</div>
 			<div class="grid-options">
-				<h3>grid options</h3>
-				<input type="button" class="grid-on" value="grid on" disabled>
-	<!-- TODO: grid style-->
-				<input type="button" class="grid-style" value="style" disabled>
-	<!-- TODO: grid color-->
-				<input type="color" class="grid-color" value="color" disabled>
+			<h2>grid options</h2>
+				<input type="button" class="grid-on hov" value="grid on" disabled>
+				<div class="grid-on-options">
+					<input type="image" class="grid-style hov" src="img/icon-grid-solid.png" disabled>
+					<input type="color" class="grid-color hov" value="color" disabled>
+				</div>
 			</div>
-			
 			<span class="hex-rgb"></span>
 		</sidebar>
 		<main class="canvas">
