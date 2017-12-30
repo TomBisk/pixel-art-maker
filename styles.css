@@ -125,6 +125,21 @@ input[type=submit] {
 	margin: 0.5em auto;
 }
 
+sidebar table {
+	border-collapse: collapse;
+	margin: 0.5em auto;
+	
+}
+
+sidebar td {
+	width: 18px;
+	border: 1px solid #d4d4d4;
+}
+
+sidebar tr {
+	height: 18px;
+}
+
 .grid-options {
 	display: flex;
 	flex-direction: column;
@@ -163,17 +178,17 @@ main {
 	padding: 1em;
 }
 
-table {
+main table {
 	z-index: 1;
 	border-collapse: collapse;
 }
 
-td {
+main td {
 	border-width: 1px;
 	width: 2.5vh;
 }
 
-tr {
+main tr {
 	height: 2.5vh;
 }
 
