@@ -5,12 +5,17 @@ function makeGrid() {
 	const gridWidth = $("#input-width").val();
 	const gridHeight = $('#input-height').val();
 	$('#pixel-canvas').children().remove();
-	if (gridWidth + gridHeight > 1) {
-		$('.grid-options input').removeAttr('disabled');
+	if (gridWidth > 0 && gridHeight > 0) {
+		$('input').removeAttr('disabled');
+		$('sidebar td').css({'border-color': '#d4d4d4'});
 		gridOfFlag = true;
 		$('input.grid-on').css({'font-weight': 'bolder' }).val('grid on');
 	} else {
 		$('.grid-options input').attr('disabled', 'disabled');
+		$('#color-picker').attr('disabled', 'disabled');
+		
+		$('sidebar td').css({'border-color': '#6f78a9'});
+		
 	}
 	for (let i = 0; i < gridHeight; i++) {
 		$('#pixel-canvas').append('<tr></tr>');
@@ -44,9 +49,9 @@ function paintGrid() {
 	}
 }
 
-$('main table').on('click', 'td', paintGrid);
+$('main table').on('mousedown', 'td', paintGrid);
 $('input.grid-on').on('click', gridOf);
-//$('table').on('mousedown', 'td', paintGrid);
+//$('table').on('mousedown', 'td', pain tGrid);
 
 
 // flag to check on/off in gridOf function
@@ -100,7 +105,7 @@ function gridColor() {
 }
 
 // paint color listener to calling lastUsed function
-$('input#color-picker').on('change', lastUsed);
+$('#color-picker').on('change', lastUsed);
 
 // color history array
 const colHist = ['#000000',1,1,1,1];
@@ -112,9 +117,10 @@ function lastUsed() {
 	$('#c').css({'background-color': colHist[2]});
 	$('#d').css({'background-color': colHist[3]});
 	$('#e').css({'background-color': colHist[4]});
-	
-	colHist.unshift($('input#color-picker').val());
-	colHist.pop();
+	if (!(colHist.includes($('#color-picker').val()))) { 
+			colHist.unshift($('#color-picker').val());
+			colHist.pop();
+	}
 }
 
 // color history listener
@@ -122,10 +128,12 @@ $('sidebar td').on('click', setColor);
 
 // function to set paint color from color history
 function setColor() {
-	$('input#color-picker').val(rgbToHex(($(this).css('background-color'))));
+	if (!($(this).css('background-color')).includes('rgba')) {
+	$('#color-picker').val(rgbToHex(($(this).css('background-color'))));	
+	} 
 }
 
-// function to convert rgb color value to hex value
+// function to convert rgb color value to hex color value
 function rgbToHex(rgbValue) {
 	let rgbArr = rgbValue.slice(4, -1).split(/,\s/);
 	for (let i = 0; i < rgbArr.length; i++) {

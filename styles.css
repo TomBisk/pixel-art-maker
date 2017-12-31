@@ -20,7 +20,7 @@ sidebar,
 main,
 footer {
 	border: 2px solid #ffffff;
-/*	border-radius: 16px;*/
+	border-radius: 16px;
 	background: #134390;
 }
 
@@ -42,13 +42,14 @@ h2 {
 	line-height: 1.5em;
 }
 
+/* Wrapper for sidebar and main */
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	flex: 1 0 auto;
 }
 
-/* Tools */
+/* Sidebar - tools */
 sidebar {
 	margin: 0.5em 0.5em 0.5em 0;
 	width: 150px;
@@ -70,6 +71,7 @@ sidebar h2 {
 	text-transform: uppercase;
 }
 
+	/* Canvas size */
 form {
 	display: flex;
 	flex-direction: column;
@@ -120,6 +122,7 @@ input[type=submit] {
   	width: 97px;
 }
 
+	/* Paint color */
 #color-picker {
 	display: block;
 	margin: 0.5em auto;
@@ -133,13 +136,14 @@ sidebar table {
 
 sidebar td {
 	width: 18px;
-	border: 1px solid #d4d4d4;
+	border: 1px solid #6f78a9;
 }
 
 sidebar tr {
 	height: 18px;
 }
 
+	/*	Grid options */
 .grid-options {
 	display: flex;
 	flex-direction: column;
@@ -181,15 +185,18 @@ main {
 main table {
 	z-index: 1;
 	border-collapse: collapse;
+	cursor: pointer;
 }
 
 main td {
+	box-sizing: border-box;
 	border-width: 1px;
-	width: 2.5vh;
+	width: 18px;
+	
 }
 
 main tr {
-	height: 2.5vh;
+	height: 18px;
 }
 
 /* Footer */
@@ -211,7 +218,7 @@ footer {
     display: block;
   }
   .wrapper {
-    flex-direction: row;
+    flex-direction: row;	
   }
   .canvas {
     flex: 1 1 auto;
