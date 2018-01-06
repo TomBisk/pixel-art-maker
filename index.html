@@ -14,35 +14,34 @@
 	</header>
 	<div class="wrapper">
 		<sidebar>
-			<div class="grid-size">
-				<h1>.tools</h1>
-				<form id="size-picker">
-					<h2> canvas size</h2>
+			<h1>.tools</h1>
+			<div id="canvas-size">
+				<form id="size-form">
+					<h2>canvas size</h2>
 					<div class="gridsize">
 						<i class="fa fa-arrows-v icon-size" aria-hidden="true"></i>
-						<input   type="number" id="input-height" name="height" min="1" max="25"  placeholder="1-25">
+						<input type="number" id="canvas-height" name="height" min="1" max="25"  placeholder="1-25">
 					</div>
 					<div class="gridsize">
-						<i class="fa fa-arrows-h icon-size" aria-hidden="true"></i><input type="number" id="input-width" name="width" min="1" max="25" placeholder="1-25">
+						<i class="fa fa-arrows-h icon-size" aria-hidden="true"></i><input type="number" id="canvas-width" name="width" min="1" max="25" placeholder="1-25">
 					</div>
-						<input type="submit" class="hov" value="create / clear">
+						<input type="submit" id="canvas-create" class="hov" value="create / clear" disabled>
 				</form>	
 			</div>
-			<div>
+			<div id="paint-color">
 				<h2>paint color</h2>
 				<input type="color" id="color-picker" class="hov" disabled >
-				<table>
+				<table id="color-history">
 					<tr>
-						<td id="a"></td>
-						<td id="b"></td>
-						<td id="c"></td>
-						<td id="d"></td>
-						<td id="e"></td>
-						
+						<td id="col-hist-1"></td>
+						<td id="col-hist-2"></td>
+						<td id="col-hist-3"></td>
+						<td id="col-hist-4"></td>
+						<td id="col-hist-5"></td>
 					</tr>
 				</table>
 			</div>
-			<div class="grid-options">
+			<div id="grid-options">
 			<h2>grid options</h2>
 				<input type="button" class="grid-on hov" value="grid on" disabled>
 				<div class="grid-on-options">
