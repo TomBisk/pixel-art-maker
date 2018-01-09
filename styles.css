@@ -20,7 +20,7 @@ sidebar,
 main,
 footer {
 	border: 2px solid #ffffff;
-/*	border-radius: 16px;*/
+	border-radius: 16px;
 	background: #134390;
 }
 
@@ -31,7 +31,7 @@ header {
 	text-align: center;
 }
 
-h1 {
+header h1 {
 	margin-bottom: 0.3em;
 	font-size: 2.5em;
 	line-height: 1.1em;
@@ -42,13 +42,14 @@ h2 {
 	line-height: 1.5em;
 }
 
-.wrapper {
+/* Wrapper for sidebar and main */
+#wrapper {
 	display: flex;
 	flex-direction: column;
 	flex: 1 0 auto;
 }
 
-/* Tools */
+/* Sidebar - tools */
 sidebar {
 	margin: 0.5em 0.5em 0.5em 0;
 	width: 150px;
@@ -70,7 +71,8 @@ sidebar h2 {
 	text-transform: uppercase;
 }
 
-form {
+	/* Canvas size */
+#size-form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -115,48 +117,52 @@ input[type=number] {
 	color: #fff;
 }
 
-input[type=submit] {
+#canvas-create {
 	margin: 0.5em;
   	width: 97px;
 }
 
+	/* Paint color */
 #color-picker {
 	display: block;
 	margin: 0.5em auto;
 }
 
-sidebar table {
+#color-history {
 	border-collapse: collapse;
 	margin: 0.5em auto;
 	
 }
 
-sidebar td {
+#color-history td {
 	width: 18px;
-	border: 1px solid #d4d4d4;
+	border: 1px solid #6f78a9;
 }
 
-sidebar tr {
+#color-history tr {
 	height: 18px;
 }
 
-.grid-options {
+	/*	Grid options */
+#grid-options {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
+/*
 .grid-on-options {
 	margin:  auto;
 }
+*/
 
-input.grid-on {
+#grid-on {
 	margin: 0.5em auto;
 	width: 97px;
 }
 
-.grid-style,
-.grid-color {
+#grid-style,
+#grid-color {
 	float: left;
 	width: 42px;
 }
@@ -165,9 +171,6 @@ input:disabled {
 	opacity: 0.4;
 }
 
-.hex-rgb {
-	visibility: hidden;
-}
 
 /* Canvas */
 main {
@@ -178,18 +181,20 @@ main {
 	padding: 1em;
 }
 
-main table {
+#canvas {
 	z-index: 1;
 	border-collapse: collapse;
+	cursor: pointer;
 }
 
-main td {
+#canvas td {
+	box-sizing: border-box;
 	border-width: 1px;
-	width: 2.5vh;
+	width: 18px;
 }
 
-main tr {
-	height: 2.5vh;
+#canvas tr {
+	height: 18px;
 }
 
 /* Footer */
@@ -202,18 +207,18 @@ footer {
 
 /* @media */
 @media (max-width: 30em) {
-  .canvas {
+  main {
     flex: 1 0 auto;
   }
 }
 @media (min-width: 30em) {
-  .header {
+  header {
     display: block;
   }
-  .wrapper {
-    flex-direction: row;
+  #wrapper {
+    flex-direction: row;	
   }
-  .canvas {
+  main {
     flex: 1 1 auto;
   }
   .aside {
