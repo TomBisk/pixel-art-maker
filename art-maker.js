@@ -22,6 +22,7 @@ function makeCanvas() {
 	$('#canvas').children().remove(); // remove exist canvas
 	// checks if both size-inputs have a value
 	if (gridWidth > 0 && gridHeight > 0) {
+		$('#how-to').css({'display': 'none'}); //remove 'how to'
 		$('input').removeAttr('disabled'); //activates unactive options
 		$('div > h2').css({'color': '#fafafa'});
 		$('#color-history td').on('click', setColor); //sets event listener to color history
@@ -36,6 +37,7 @@ function makeCanvas() {
 		$('#color-history td').css({'border-color': '#6f78a9', 'opacity': '0.4'});
 		$('#canvas-create').attr('disabled', 'disabled'); //unactivates create/clear button
 		$('#canvas').children().remove(); //removes canvas
+		$('#how-to').css({'display': ''}); //show 'how to'
 	}
 	// creates canvas with declared size
 	for (let i = 0; i < gridHeight; i++) {

@@ -7,7 +7,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
+	max-width: 1000px;
 	min-height: 100vh;
+	margin: auto;
 	padding: 0.5em;
 	
 	background-color: #b5bdc9;
@@ -16,7 +18,7 @@ body {
 }
 
 header,
-sidebar,
+aside,
 main,
 footer {
 	border: 2px solid #ffffff;
@@ -42,26 +44,27 @@ h2 {
 	line-height: 1.5em;
 }
 
-/* Wrapper for sidebar and main */
+/* Wrapper for aside and main */
 #wrapper {
 	display: flex;
 	flex-direction: column;
 	flex: 1 0 auto;
 }
 
-/* Sidebar - tools */
-sidebar {
+/* Aside - tools */
+aside {
 	margin: 0.5em 0.5em 0.5em 0;
 	width: 150px;
+	min-width: 150px;
 	padding: 0.5em;
 }
 
-sidebar h1 {
+aside h1 {
 	font-size: 1.2em;
 	text-align: right;
 }
 
-sidebar h2 {
+aside h2 {
 	border-top: 4px double #fff;
 	width: 100%;
 	
@@ -150,12 +153,6 @@ input[type=number] {
 	align-items: center;
 }
 
-/*
-.grid-on-options {
-	margin:  auto;
-}
-*/
-
 #grid-on {
 	margin: 0.5em auto;
 	width: 97px;
@@ -171,18 +168,38 @@ input:disabled {
 	opacity: 0.4;
 }
 
-
-/* Canvas */
+/* Main */
 main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 0.5em 0;
-	padding: 1em;
+/*	padding: 1em;*/
 }
 
+	/* How to */
+#how-to {
+	padding: 0;
+	width: 90%;
+}
+#how-to h1 {
+	margin: 1em 0 3em;
+}
+
+
+#how-to ol {
+	margin-left: 3em; 
+	margin: 3em;
+	padding-left: 3em;
+}
+
+li {
+	line-height: 1.5em;
+	margin-bottom: 1em;
+}
+
+	/* Canvas */
 #canvas {
-	z-index: 1;
 	border-collapse: collapse;
 	cursor: pointer;
 }
