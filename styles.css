@@ -75,6 +75,10 @@ aside h2 {
 }
 
 	/* Canvas size */
+#canvas-size h2 {
+	color: #fafafa;
+}
+
 #size-form {
 	display: flex;
 	flex-direction: column;
@@ -174,28 +178,26 @@ main {
 	justify-content: center;
 	align-items: center;
 	margin: 0.5em 0;
-/*	padding: 1em;*/
 }
 
 	/* How to */
 #how-to {
-	padding: 0;
 	width: 90%;
+	padding: 0;
 }
+
 #how-to h1 {
 	margin: 1em 0 3em;
 }
 
-
-#how-to ol {
-	margin-left: 3em; 
+ol {
 	margin: 3em;
 	padding-left: 3em;
 }
 
 li {
-	line-height: 1.5em;
 	margin-bottom: 1em;
+	line-height: 1.5em;
 }
 
 	/* Canvas */
