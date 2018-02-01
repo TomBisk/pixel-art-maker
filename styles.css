@@ -8,6 +8,7 @@ body {
 	flex-direction: column;
 	box-sizing: border-box;
 	max-width: 1000px;
+	min-width: 390px;
 	min-height: 100vh;
 	margin: auto;
 	padding: 0.5em;
@@ -202,7 +203,9 @@ li {
 
 	/* Canvas */
 #canvas {
+	margin: 1em;
 	border-collapse: collapse;
+	
 	cursor: pointer;
 }
 
@@ -229,18 +232,35 @@ footer {
   main {
     flex: 1 0 auto;
   }
+	
+  aside {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: auto;
+  }
+	
+  aside h1 {
+	flex-basis: 100%;		
+  }
 }
 @media (min-width: 30em) {
   header {
     display: block;
   }
+	
   #wrapper {
     flex-direction: row;	
   }
+	
   main {
     flex: 1 1 auto;
   }
-  .aside {
+/*
+	
+  aside {
     width: 20%;
   }
+*/
 }
