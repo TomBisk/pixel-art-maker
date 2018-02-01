@@ -228,7 +228,7 @@ footer {
 }
 
 /* @media */
-@media (max-width: 30em) {
+@media (max-width: 40em) {
   main {
     flex: 1 0 auto;
   }
@@ -237,7 +237,7 @@ footer {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	width: auto;
   }
 	
@@ -245,7 +245,7 @@ footer {
 	flex-basis: 100%;		
   }
 }
-@media (min-width: 30em) {
+@media (min-width: 40em) {
   header {
     display: block;
   }
