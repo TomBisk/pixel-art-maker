@@ -184,7 +184,7 @@ main {
 	/* How to */
 #how-to {
 	width: 90%;
-	padding: 0;
+	padding: 1em;
 }
 
 #how-to h1 {
@@ -228,24 +228,7 @@ footer {
 }
 
 /* @media */
-@media (max-width: 40em) {
-  main {
-    flex: 1 0 auto;
-  }
-	
-  aside {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	width: auto;
-  }
-	
-  aside h1 {
-	flex-basis: 100%;		
-  }
-}
-@media (min-width: 40em) {
+@media (min-width: 701px) {
   header {
     display: block;
   }
@@ -257,10 +240,104 @@ footer {
   main {
     flex: 1 1 auto;
   }
-/*
+
+}
+
+@media (min-width: 481px) and (max-width: 700px) {
+  main {
+    flex: 1 0 auto;
+	 
+  }
+	
+  header {
+	font-size: 0.7em; 
+  }
+  
+  footer h2 {
+	font-size: 0.7em;		
+  }
 	
   aside {
-    width: 20%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 0;
+	margin-right: 0;
+	width: auto;
+	
   }
-*/
+	
+  aside h1 {
+	flex-basis: 100%;
+	margin-right: 10%;
+	  
+	font-size: 1em;
+  }
+	
+  aside h2 {
+	font-size: 0.5em;		
+  }
+	
+  #how-to h1 {
+	margin: 1em 0 2em;
+	font-size: 1.2em;
+  }
+	
+  ol {
+	margin: 2em;	
+  }
+	
+  li {
+	font-size: 0.9em;	
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    flex: 1 0 auto;
+  }
+  
+  header {
+	font-size: 0.5em; 
+  }
+  
+  footer h2 {
+	font-size: 0.5em;		
+  }
+		
+  aside {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 0;
+	margin-right: 0;
+	width: auto;
+  }
+	
+  aside h1 {
+	flex-basis: 100%;
+	margin-right: 5%;
+	  
+	font-size: 0.8em;
+  }
+
+  aside h2 {
+	font-size: 0.5em;		
+  }
+	
+  #how-to h1 {
+	margin: 1em 0 2em;
+	font-size: 0.9em;
+  }
+	
+  ol {
+	margin: 1em;	
+  }
+	
+  li {
+	font-size: 0.6em;	
+  }
+
 }
