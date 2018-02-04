@@ -18,7 +18,7 @@
 			<h1>.tools</h1>
 			<div id="canvas-size">
 				<h2>canvas size</h2>
-				<form id="size-form">
+				<form id="size-form" method="post">
 					<div class="gridsize">
 						<i class="fa fa-arrows-h icon-size" aria-hidden="true"></i><input type="number" id="canvas-width" name="width" min="1" max="25" placeholder="1-25">
 					</div>
@@ -40,6 +40,7 @@
 			<div id="paint-color">
 				<h2>paint color</h2>
 				<input type="color" id="color-picker" class="hov" disabled >
+				<h3>last used</h3>
 				<table id="color-history">
 					<tr>
 						<td id="col-hist-1"></td>
