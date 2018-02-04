@@ -45,15 +45,22 @@ function makeCanvas() {
 		$('#canvas').append('<tr></tr>');
 		for ( let j = 0; j < gridWidth; j++) {
 		  $('#canvas tr:last').append('<td></td>');
+		// or use while loop:
+		//let j = 0;
+    	//while (j < gridWidth) {
+      	//$('#canvas tr:last').append('<td></td>');
+      	//j++;
+    	//}
 		}
   	$('#canvas td').css({"background-color": "#fff", "border-style": borderStyle, "border-color": borderColor});
 	}
-  	event.preventDefault();
+  	
   	return;
 }
 
 // event listener to create, clear or remove canvas
 $('#size-form').submit(function(event) {
+	event.preventDefault();
 	makeCanvas();
 });
 						
