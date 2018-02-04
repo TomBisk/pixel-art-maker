@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Pixel Art Maker</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" >
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -28,9 +29,18 @@
 						<input type="submit" id="canvas-create" class="hov" value="create / clear" disabled>
 				</form>	
 			</div>
+			<div id="grid-options">
+			<h2>grid options</h2>
+				<input type="button" id="grid-on" class="hov" value="grid on" disabled>
+				<div id="grid-on-options">
+					<input type="image" id="grid-style" class="hov" src="./img/icon-grid-solid.png" disabled>
+					<input type="color" id="grid-color" class="hov" disabled>
+				</div>
+			</div>
 			<div id="paint-color">
 				<h2>paint color</h2>
 				<input type="color" id="color-picker" class="hov" disabled >
+				<h3>last used</h3>
 				<table id="color-history">
 					<tr>
 						<td id="col-hist-1"></td>
@@ -41,14 +51,7 @@
 					</tr>
 				</table>
 			</div>
-			<div id="grid-options">
-			<h2>grid options</h2>
-				<input type="button" id="grid-on" class="hov" value="grid on" disabled>
-				<div id="grid-on-options">
-					<input type="image" id="grid-style" class="hov" src="img/icon-grid-solid.png" disabled>
-					<input type="color" id="grid-color" class="hov" disabled>
-				</div>
-			</div>
+			
 		</aside>
 		<main>
 	<!-- TODO: manual -->
@@ -66,7 +69,7 @@
 		</main>
 	</div>
 	<footer>
-		<h2>2017 by TomBisk</h2>
+		<h2>2017 by Tomasz Bochenek (TomBisk)</h2>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="art-maker.js"></script>

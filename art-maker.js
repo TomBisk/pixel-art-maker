@@ -31,7 +31,8 @@ function makeCanvas() {
 		$('#grid-on').val('grid on');
 	} else {
 		$('#grid-options input').attr('disabled', 'disabled'); //unactivates active options
-		$('div > h2').css({'color': '#6f78a9'});
+		$('#paint-color h2').css({'color': '#6f78a9'});
+		$('#grid-options h2').css({'color': '#6f78a9'});
 		$('#color-picker').attr('disabled', 'disabled');
 		$('#color-history td').off('click', setColor); //removes event listener to color history
 		$('#color-history td').css({'border-color': '#6f78a9', 'opacity': '0.4'});

@@ -8,6 +8,7 @@ body {
 	flex-direction: column;
 	box-sizing: border-box;
 	max-width: 1000px;
+	min-width: 390px;
 	min-height: 100vh;
 	margin: auto;
 	padding: 0.5em;
@@ -22,7 +23,7 @@ aside,
 main,
 footer {
 	border: 2px solid #ffffff;
-	border-radius: 16px;
+/*	border-radius: 16px;*/
 	background: #134390;
 }
 
@@ -74,7 +75,19 @@ aside h2 {
 	text-transform: uppercase;
 }
 
+aside h3 {
+	padding: 0;
+	font-size: 0.5em;
+	line-height: 2.5em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 	/* Canvas size */
+#canvas-size h2 {
+	color: #fafafa;
+}
+
 #size-form {
 	display: flex;
 	flex-direction: column;
@@ -111,6 +124,7 @@ input {
 
 input[type=number] {
 	border: 1px solid #dcdcdc;
+	width: 55px;
 	padding-left: 40px;
 	
 	background: transparent;
@@ -133,7 +147,7 @@ input[type=number] {
 
 #color-history {
 	border-collapse: collapse;
-	margin: 0.5em auto;
+	margin: 0 auto;
 	
 }
 
@@ -174,33 +188,33 @@ main {
 	justify-content: center;
 	align-items: center;
 	margin: 0.5em 0;
-/*	padding: 1em;*/
 }
 
 	/* How to */
 #how-to {
-	padding: 0;
 	width: 90%;
+	padding: 1em;
 }
+
 #how-to h1 {
 	margin: 1em 0 3em;
 }
 
-
-#how-to ol {
-	margin-left: 3em; 
+ol {
 	margin: 3em;
 	padding-left: 3em;
 }
 
 li {
-	line-height: 1.5em;
 	margin-bottom: 1em;
+	line-height: 1.5em;
 }
 
 	/* Canvas */
 #canvas {
+	margin: 1em;
 	border-collapse: collapse;
+	
 	cursor: pointer;
 }
 
@@ -223,22 +237,124 @@ footer {
 }
 
 /* @media */
-@media (max-width: 30em) {
-  main {
-    flex: 1 0 auto;
-  }
-}
-@media (min-width: 30em) {
+@media (min-width: 701px) {
   header {
     display: block;
   }
+	
   #wrapper {
     flex-direction: row;	
   }
+	
   main {
     flex: 1 1 auto;
   }
-  .aside {
-    width: 20%;
+
+}
+
+@media (min-width: 481px) and (max-width: 700px) {
+  main {
+    flex: 1 0 auto;
+	 
   }
+	
+  header {
+	font-size: 0.7em; 
+  }
+  
+  footer h2 {
+	font-size: 0.7em;		
+  }
+	
+  aside {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 0;
+	margin-right: 0;
+	width: auto;
+	
+  }
+	
+  aside h1 {
+	flex-basis: 100%;
+	margin-right: 10%;
+	  
+	font-size: 1em;
+  }
+	
+  aside h2 {
+	font-size: 0.5em;		
+  }
+	
+  aside h3 {
+	font-size: 0.4em;
+  }
+	
+  #how-to h1 {
+	margin: 1em 0 2em;
+	font-size: 1.2em;
+  }
+	
+  ol {
+	margin: 2em;	
+  }
+	
+  li {
+	font-size: 0.9em;	
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    flex: 1 0 auto;
+  }
+  
+  header {
+	font-size: 0.5em; 
+  }
+  
+  footer h2 {
+	font-size: 0.5em;		
+  }
+		
+  aside {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 0;
+	margin-right: 0;
+	width: auto;
+  }
+	
+  aside h1 {
+	flex-basis: 100%;
+	margin-right: 5%;
+	  
+	font-size: 0.8em;
+  }
+
+  aside h2 {
+	font-size: 0.5em;		
+  }
+	
+  aside h3 {
+	font-size: 0.4em;
+  }
+	
+  #how-to h1 {
+	margin: 1em 0 2em;
+	font-size: 0.9em;
+  }
+	
+  ol {
+	margin: 1em;	
+  }
+	
+  li {
+	font-size: 0.6em;	
+  }
+
 }
